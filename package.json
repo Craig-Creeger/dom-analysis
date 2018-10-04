@@ -2,9 +2,11 @@
   "name": "dom-analysis",
   "version": "1.0.0",
   "description": "A utility that scans a webpage to report basic DOM statistics such as total elements on the page.",
-  "main": "main.js",
+	"main": "main.js",
+	"files": ["dist"],
   "scripts": {
-    "build": "npm run clean; NODE_ENV=production webpack -p",
+    "build": "npm run clean; webpack --mode='production'",
+    "build:dev": "npm run clean; webpack --mode='development'",
     "clean": "rm -rf testCoverage dist",
     "test": "jest",
     "lint": "eslint . --rule 'no-console: 2' --rule 'no-debugger: 2'"
